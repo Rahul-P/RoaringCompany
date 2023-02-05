@@ -7,7 +7,7 @@ func CreatedRecordId(passedId int64) uint64 {
 	return uint64(passedId)
 }
 
-func GetBusinessId(id uint64) uint64 {
+func GetBid(id uint64) uint64 {
 	if id <= ONE {
 		return ONE
 	}
