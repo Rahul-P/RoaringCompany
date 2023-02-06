@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-const dbTimeout = time.Second * 5
+const DatabaseTimeout = time.Second * 5
 
 func CurrentTimeStampV2() (day uint8, month uint8, year uint8, timeofDayInSeconds int) {
 	nowis := time.Now()
