@@ -60,6 +60,10 @@ func Validate(context context.Context, db *sql.DB) error {
 	return nil
 }
 
+func GetTest() error {
+	return nil
+}
+
 func openDb(dsn string, context context.Context, logger kitlog.Logger, msdbname string) (*sql.DB, error) {
 
 	// Create connection pool
