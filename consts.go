@@ -12,3 +12,5 @@ const FALSE bool = false
 
 const Digit_ZERO string = "0"
 const Digit_NINE string = "9"
+
+const CartelBusinessId = 1
