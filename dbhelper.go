@@ -46,7 +46,7 @@ func GetDbConn(context context.Context, logger kitlog.Logger, server, user, pass
 	}
 }
 
-func PingContext(context context.Context, db *sql.DB) error {
+func Validate(context context.Context, db *sql.DB) error {
 	// Check if database connection is Not null.
 	if db == nil {
 		return DatabaseIssue
