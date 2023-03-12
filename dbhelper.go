@@ -46,6 +46,20 @@ func GetDbConn(context context.Context, logger kitlog.Logger, server, user, pass
 	}
 }
 
+func PingContext(context context.Context, db *sql.DB) error {
+	// Check if database connection is Not null.
+	if db == nil {
+		return DatabaseIssue
+	}
+
+	// Check if database is alive.
+	err := db.PingContext(context)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 func openDb(dsn string, context context.Context, logger kitlog.Logger, msdbname string) (*sql.DB, error) {
 
 	// Create connection pool

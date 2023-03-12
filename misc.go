@@ -39,3 +39,8 @@ func GetId(passedId int64) uint64 {
 // Post Commit
 // git tag v0.1.2
 // git push origin v0.1.2
+
+// go mod tidy
+// commit code
+// git tag v0.1.2
+// git push origin v0.1.2
