@@ -2,17 +2,17 @@ package roaringcompany
 
 import "strings"
 
-func Index(s string) (startascii uint32, lseascii uint32, meascii uint32, proceed bool) {
+func Index(s string) (startascii uint32, lseascii uint32, meascii uint32) {
 	slen := uint32(PureLength(s))
 	if slen <= ZERO {
-		return ZERO, ZERO, ZERO, FALSE
+		return ZERO, ZERO, ZERO
 	}
 
 	start := uint32(s[0])
 	end := uint32(s[slen-ONE])
 	midpoint := uint32(s[slen/TWO]) // integer division, decimals are truncated
 
-	return start, slen + start + end, midpoint + end, TRUE
+	return start, slen + start + end, midpoint + end
 }
 
 func PureLength(s string) int {
